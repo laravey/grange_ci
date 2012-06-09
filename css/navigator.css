@@ -3,6 +3,22 @@
  *	for main multilevel dropdown menu
  */
 
+.top_left_curve{
+	border-top-left-radius: 6px;
+}
+
+.top_right_curve{
+	border-top-right-radius: 6px;
+}
+
+.bottom_right_curve{
+	border-bottom-right-radius: 6px;
+}
+
+.bottom_left_curve{
+	border-bottom-left-radius: 6px;
+}
+
 /* removes bullet and indents */
 #topnav, #topnav ul{
 	z-index: 9;
@@ -11,7 +27,9 @@
   list-style-type:none;
   list-style-position:outside;
   position:relative;
-  line-height:1.5em;
+  line-height:25px;
+	font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+	font-size: 14px;
 }
 
 /* add some basic mouse action/movement designs.
@@ -20,15 +38,20 @@
 #topnav a:link, #topnav a:active, #topnav a:visited{
     display:block;
 		width: 154px;
+		min-height: 25px;
     border:1px solid #000;
-    color:#fff;
+    color:#6F9;
     text-decoration:none;
     background-color:#000;
+			-webkit-box-shadow: 0px 1px 5px 0px #4a4a4a;
+			-moz-box-shadow: 0px 1px 5px 0px #4a4a4a;
+			box-shadow: 0px 1px 5px 0px #4a4a4a;
  }
 
 #topnav a:hover{
-    background-color:#fff;
-    color:#333;
+    background-color:#3C9;
+    color:#000;
+		font-weight:bold;
 }
 /* arrange links such that
  * each submenu is under its parent menu
@@ -48,7 +71,7 @@
 #topnav ul {
     position:absolute;
     width:154px;
-    top:1.5em;
+    top:25px;
     display:none;
 }
 

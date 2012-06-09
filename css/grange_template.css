@@ -3,7 +3,7 @@
 
 body
 {
-	background-color: #CCC;
+	background-color: #0CC;
 }
 
 div
@@ -50,7 +50,7 @@ div
 
 #main_dropdown
 {
-	margin-top: 15px;
+	margin-top: 10px;
 }
 
 #wrapper
@@ -58,7 +58,7 @@ div
 	width: 940px;
 	padding-bottom: 50px;
 	position: absolute;
-	top: 395px;
+	top: 385px;
 }
 
 #inner_body

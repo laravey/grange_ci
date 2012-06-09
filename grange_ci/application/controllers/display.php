@@ -1,17 +1,24 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
 require('crumbs.php');
+//require('login.php');
 
 class Display extends CI_Controller {
 	function __construct(){
 		parent::__construct();
 		$this->crumbs = new Crumbs();
+		$this->login = new Login();
 	}
 	
-	function view_home(){
+	/* Open to public but 'read only'
+	 * Only grange members/admin can edit this page.
+	 */
+	function view_home(){ //open to public
 		$data['title'] = 'Home';
 		
 		$data['crumb_links'] = $this->crumbs->create();
+		//$this->session->set_userdata('username', 'brian');
+		//$this->session->unset_userdata('username');
 		
 		$this->load->view('templates/header', $data);
 		$this->load->view('templates/navigator', $data);
@@ -22,6 +29,9 @@ class Display extends CI_Controller {
 		$this->load->view('templates/footer', $data);
 	}
 	
+	/* Open to public but 'read only'
+	 * Only grange members/admin can edit this page.
+	 */
 	function history(){
 		$data['title'] = 'History';
 		
@@ -38,6 +48,9 @@ class Display extends CI_Controller {
 		$this->load->view('templates/footer', $data);
 	}
 	
+	/* Open to public but 'read only'
+	 * Only grange members/admin can edit this page.
+	 */
 	function stories(){
 		$data['title'] = 'Grange Stories';
 		
@@ -54,6 +67,9 @@ class Display extends CI_Controller {
 		$this->load->view('templates/footer', $data);
 	}
 	
+	/* Open to public but 'read only'
+	 * Only grange members/admin can edit this page.
+	 */
 	function scholarship(){
 		$data['title'] = 'Scholarship';
 		
@@ -70,6 +86,9 @@ class Display extends CI_Controller {
 		$this->load->view('templates/footer', $data);
 	}
 	
+	/* Open to public but 'read only'
+	 * Only grange members/admin can edit this page.
+	 */
 	function labulabo(){
 		$data['title'] = 'LabuLabo';
 		
@@ -87,6 +106,9 @@ class Display extends CI_Controller {
 		$this->load->view('templates/footer', $data);
 	}
 	
+	/* Open to public but 'read only'
+	 * Only grange members/admin can edit this page.
+	 */
 	function civic_activities(){
 		$data['title'] = 'Civic Activities';
 		
@@ -104,6 +126,9 @@ class Display extends CI_Controller {
 		$this->load->view('templates/footer', $data);
 	}
 	
+	/* Partially open to public but 'read only'
+	 * Only grange members/admin can edit this page.
+	 */
 	function academy(){
 		$data['title'] = 'Grange Academy';
 		
@@ -121,6 +146,9 @@ class Display extends CI_Controller {
 		$this->load->view('templates/footer', $data);
 	}
 	
+	/* Open to public but 'read only'
+	 * Only grange members/admin can edit this page.
+	 */
 	function formation_cause(){
 		$data['title'] = 'Grange Formation Cause';
 		
@@ -138,6 +166,8 @@ class Display extends CI_Controller {
 		$this->load->view('templates/footer', $data);
 	}
 	
+	/* Partially public
+	 */
 	function gallery_pictures(){
 		$data['title'] = 'Pictures';
 		
@@ -154,6 +184,8 @@ class Display extends CI_Controller {
 		$this->load->view('templates/footer', $data);
 	}
 	
+	/* Partially public
+	 */
 	function gallery_videos(){
 		$data['title'] = 'Videos';
 		
@@ -170,6 +202,9 @@ class Display extends CI_Controller {
 		$this->load->view('templates/footer', $data);
 	}
 	
+	/* Open to public but 'read only'
+	 * Only grange members/admin can edit this page.
+	 */
 	function news(){
 		$data['title'] = 'News';
 		
@@ -186,6 +221,9 @@ class Display extends CI_Controller {
 		$this->load->view('templates/footer', $data);
 	}
 	
+	/* Open to public but 'read only'
+	 * Only grange members/admin can edit this page.
+	 */
 	function public_activities(){
 		$data['title'] = 'Activities';
 		
@@ -202,6 +240,8 @@ class Display extends CI_Controller {
 		$this->load->view('templates/footer', $data);
 	}
 	
+	/* Private
+	 */
 	function announcements(){
 		$data['title'] = 'Announcements';
 		
@@ -218,6 +258,8 @@ class Display extends CI_Controller {
 		$this->load->view('templates/footer', $data);
 	}
 	
+	/* Private
+	 */
 	function our_activities(){
 		$data['title'] = 'Grange Activities';
 		
@@ -234,6 +276,9 @@ class Display extends CI_Controller {
 		$this->load->view('templates/footer', $data);
 	}
 	
+	/* Partially open to public but 'read only'
+	 * Only grange members/admin can edit this page.
+	 */
 	function residents(){
 		$data['title'] = 'Resident Members';
 		
@@ -250,6 +295,9 @@ class Display extends CI_Controller {
 		$this->load->view('templates/footer', $data);
 	}
 	
+	/* Partially open to public but 'read only'
+	 * Only grange members/admin can edit this page.
+	 */
 	function jr_alumni(){
 		$data['title'] = 'Junior Alumni';
 		
@@ -266,6 +314,9 @@ class Display extends CI_Controller {
 		$this->load->view('templates/footer', $data);
 	}
 	
+	/* Partially open to public but 'read only'
+	 * Only grange members/admin can edit this page.
+	 */
 	function sr_alumni(){
 		$data['title'] = 'Senior Alumni';
 		
@@ -282,6 +333,9 @@ class Display extends CI_Controller {
 		$this->load->view('templates/footer', $data);
 	}
 	
+	/* Open to public but 'read only'
+	 * Only grange members/admin can edit this page.
+	 */
 	function contact_us(){
 		$data['title'] = 'Contact Us';
 		
