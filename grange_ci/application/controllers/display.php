@@ -7,7 +7,7 @@ class Display extends CI_Controller {
 	function __construct(){
 		parent::__construct();
 		$this->crumbs = new Crumbs();
-		$this->login = new Login();
+		//$this->login = new Login();
 	}
 	
 	/* Open to public but 'read only'
@@ -17,8 +17,8 @@ class Display extends CI_Controller {
 		$data['title'] = 'Home';
 		
 		$data['crumb_links'] = $this->crumbs->create();
-		//$this->session->set_userdata('username', 'brian');
-		//$this->session->unset_userdata('username');
+		//$this->session->set_userdata('user_id', 'brian');
+		//$this->session->unset_userdata('user_id');
 		
 		$this->load->view('templates/header', $data);
 		$this->load->view('templates/navigator', $data);
@@ -243,6 +243,10 @@ class Display extends CI_Controller {
 	/* Private
 	 */
 	function announcements(){
+		if(!array_key_exists('user_id', $this->session->all_userdata())){
+			redirect(base_url(), 'refresh');
+		}
+		
 		$data['title'] = 'Announcements';
 		
 		$data['crumb_links'] = $this->crumbs->create();
@@ -261,6 +265,10 @@ class Display extends CI_Controller {
 	/* Private
 	 */
 	function our_activities(){
+		if(!array_key_exists('user_id', $this->session->all_userdata())){
+			redirect(base_url(), 'refresh');
+		}
+		
 		$data['title'] = 'Grange Activities';
 		
 		$data['crumb_links'] = $this->crumbs->create();

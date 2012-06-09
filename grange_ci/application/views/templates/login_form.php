@@ -10,14 +10,21 @@
   <?php
 		//echo 'waka: '.$this->session->userdata('session_id');
 		
-		if(array_key_exists('username', $this->session->all_userdata())){
+		if(array_key_exists('user_id', $this->session->all_userdata())){
 			echo '<div class="sidebar_menu">';
-				echo 'Welcome '.$this->session->userdata('username').'!'.br();
+				echo 'Welcome '.$this->session->userdata('user_id').'!'.br();
 				echo 'link to Profile'.br();
 				echo 'linkt to Settings'.br();
-				echo 'logout';
+				echo anchor('login/logout', 'Logout', array(
+								'class' => '',
+								'id' => ''
+						  ));
 			echo '</div>';//end .side_menu
 		}else{
+			echo '<div class="flash_message">';
+				echo $this->session->flashdata('login_message');
+			echo '</div>';//end .flash_message
+			
 			$attr = array(
 					'id' => 'grange_login',
 					'name' => 'grange_login'

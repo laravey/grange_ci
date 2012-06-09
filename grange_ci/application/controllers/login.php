@@ -9,7 +9,16 @@ class Login extends CI_Controller{
 	}
 	
 	function validate(){
-		echo 'jaller!';
+		$data['username'] = $this->input->post('username');
+		$data['password'] = $this->input->post('password');
+		
+		$this->Login_queries->_validate($data);
+		redirect(base_url(), 'refresh');
+	}
+	
+	function logout(){
+		$this->session->unset_userdata('user_id');
+		redirect(base_url(), 'refresh');
 	}
 }
 

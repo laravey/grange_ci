@@ -48,11 +48,11 @@
     	<ul>
        	<li><a href="<?php echo base_url().'index.php/display/news'; ?>">News</a></li>
        	<li><a href="<?php echo base_url().'index.php/display/public_activities'; ?>"
-         			<?php if(!array_key_exists('username', $this->session->all_userdata())){
+         			<?php if(!array_key_exists('user_id', $this->session->all_userdata())){
 											echo 'class="bottom_right_curve bottom_left_curve"'; } ?>>
               Activities</a>
         </li>
-        <?php if(array_key_exists('username', $this->session->all_userdata())){?>
+        <?php if(array_key_exists('user_id', $this->session->all_userdata())){?>
         <li><a href="<?php echo base_url().'index.php/display/announcements'; ?>">Announcements</a></li>
         <li><a href="<?php echo base_url().'index.php/display/our_activities'; ?>"
          			class="bottom_right_curve bottom_left_curve">
