@@ -29,6 +29,21 @@ class Display extends CI_Controller {
 		$this->load->view('templates/footer', $data);
 	}
 	
+	function signup(){
+		$data['title'] = 'Signup';
+		
+		$data['crumb_links'] = $this->crumbs->create();
+		$data['crumb_links'] .= $this->crumbs->append('signup', 'Sign Up');
+		
+		$this->load->view('templates/header', $data);
+		$this->load->view('templates/navigator', $data);
+		$this->load->view('templates/bread_crumbs', $data);
+		$this->load->view('templates/login_form', $data);
+		$this->load->view('templates/advertisement', $data);
+		$this->load->view('signup', $data);
+		$this->load->view('templates/footer', $data);
+	}
+	
 	/* Open to public but 'read only'
 	 * Only grange members/admin can edit this page.
 	 */

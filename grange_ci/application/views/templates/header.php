@@ -9,6 +9,7 @@
 	<script type="text/javascript" src="/javascript/jquery.nivo.slider.2.7.1.js"></script>
 	<script type="text/javascript" src="/javascript/navigator.js"></script>
 	<script type="text/javascript" src="/javascript/NivoSlider.js"></script>
+	<script type="text/javascript" src="/javascript/login.js"></script>
 
 	<link href="/css/nivo-slider.css" rel="stylesheet" type="text/css" />
 	<link href="/css/default.css" rel="stylesheet" type="text/css" />

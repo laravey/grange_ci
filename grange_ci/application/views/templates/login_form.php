@@ -20,10 +20,11 @@
 								'id' => ''
 						  ));
 			echo '</div>';//end .side_menu
+			
 		}else{
-			echo '<div class="flash_message">';
+			echo '<div id="login_flash_message">';
 				echo $this->session->flashdata('login_message');
-			echo '</div>';//end .flash_message
+			echo '</div>';//end #login_flash_message
 			
 			$attr = array(
 					'id' => 'grange_login',
@@ -59,8 +60,8 @@
 				echo form_password($attr);
 				
 				$attr = array(
-						'id' => 'sign_up_button',
-						'name' => 'sign_up_button',
+						'id' => 'signup_button',
+						'name' => 'signup_button',
 						'content' => 'Sign Up'
 					);
 				echo form_button($attr);
