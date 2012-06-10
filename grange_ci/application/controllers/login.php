@@ -9,7 +9,7 @@ class Login extends CI_Controller{
 	}
 	
 	function validate(){
-		$data['username'] = $this->input->post('username');
+		$data['user_id'] = $this->input->post('user_id');
 		$data['password'] = $this->input->post('password');
 		
 		$this->Login_queries->_validate($data);

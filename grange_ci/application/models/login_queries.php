@@ -19,7 +19,7 @@ class Login_queries extends CI_Model{
 		 * col: id => refers to username
 		 */
 		$this->db->select('id', 'password');
-		$this->db->where('id', $data['username']);
+		$this->db->where('id', $data['user_id']);
 		$this->db->where('password', $data['password']);
 		$q = $this->db->get('user');
 		
@@ -29,17 +29,17 @@ class Login_queries extends CI_Model{
 		 *		he's/she's not yet a registered member
 		 */
 		if($q->num_rows() == 1){
-			$this->session->set_userdata('user_id', $data['username']);
+			$this->session->set_userdata('user_id', $data['user_id']);
 		}else{
 			$this->db->select('id');
-			$this->db->where('id', $data['username']);
+			$this->db->where('id', $data['user_id']);
 			$q = $this->db->get('user');
 			
 			if($q->num_rows() == 1){
 				$msg = 'Invalid password. Please try again.';
 				$this->session->set_flashdata('login_message', $msg);
 			}else{
-				$msg = $data['username'].' is not a registered username.';
+				$msg = $data['user_id'].' is not a registered username.';
 				$this->session->set_flashdata('login_message', $msg);
 			}
 		} 
