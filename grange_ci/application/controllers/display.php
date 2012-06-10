@@ -39,16 +39,34 @@ class Display extends CI_Controller {
 	/* this can't be viewed
 	 * if user is logged in
 	 */
-	function signup(){
+	function signup($page='',$data=array()){
 		if(array_key_exists('user_id', $this->session->all_userdata())){
 			redirect(base_url(), 'refresh');
 		}
+		
 		$data['title'] = 'Signup';
 		
 		$data['crumb_links'] = $this->crumbs->create();
 		$data['crumb_links'] .= $this->crumbs->append('signup', 'Sign Up');
 		
-		$this->_load_page('signup/signup_form', $data);
+		$this->_load_page('signup/'.$page, $data);
+	}
+	
+	/* Super Private
+	 * For admin(s) only
+	 */
+	function pending_requests(){
+		if(!array_key_exists('user_admin_id', $this->session->all_userdata())){
+			redirect(base_url(), 'refresh');
+		}
+		
+		$data['title'] = 'Pending Requests';
+		
+		$data['crumb_links'] = $this->crumbs->create();
+		$data['crumb_links'] .= $this->crumbs->append('#', 'Archive');
+		$data['crumb_links'] .= $this->crumbs->append('pending_requests', 'Pending Requests');
+		
+		$this->_load_page('signup/pending_requests', $data);
 	}
 	
 	/* Open to public but 'read only'
@@ -226,18 +244,6 @@ class Display extends CI_Controller {
 		$data['crumb_links'] .= $this->crumbs->append('our_activities', 'Grange Activities');
 		
 		$this->_load_page('archives/our_activities', $data);
-	}
-	
-	/* Private
-	 */
-	function pending_requests(){
-		$data['title'] = 'Pending Requests';
-		
-		$data['crumb_links'] = $this->crumbs->create();
-		$data['crumb_links'] .= $this->crumbs->append('#', 'Archive');
-		$data['crumb_links'] .= $this->crumbs->append('pending_requests', 'Pending Requests');
-		
-		$this->_load_page('archives/pending_requests', $data);
 	}
 	
 	/* Partially open to public but 'read only'

@@ -7,7 +7,7 @@
 			'id' => 'signup_form',
 			'name' => 'signup_form'
 		);
-	echo form_open('display/pending_requests', $attr);
+	echo form_open('signup/confirm', $attr);
 		$attr = array(
 				'id' => 'label_for_username',
 				'name' => 'label_for_username',
@@ -38,7 +38,24 @@
 				'maxlength' => '20',
 				'size' => '20'
 			);
-		echo form_input($attr);
+		echo form_password($attr);
+		
+		echo br();
+		
+		$attr = array(
+				'id' => 'label_for_confirm_password',
+				'name' => 'label_for_confirm_password',
+				'class' => 'signup_label'
+			);
+		echo form_label('<span class="red">*</span> confirm password: ', 'confirm_password', $attr);
+		
+		$attr = array(
+				'id' => 'confirm_password',
+				'name' => 'confirm_password',
+				'maxlength' => '20',
+				'size' => '20'
+			);
+		echo form_password($attr);
 		
 		echo br();
 		

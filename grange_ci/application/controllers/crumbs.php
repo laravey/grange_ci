@@ -6,7 +6,7 @@ class Crumbs extends CI_Controller {
 	}
 	
 	function create(){
-		$path = base_url().'index.php/display/view_home';
+		$path = site_url('display/view_home');
 		return '<a href="'.$path.'">Home</a>';
 	}
 	
@@ -14,7 +14,7 @@ class Crumbs extends CI_Controller {
 		if($page == '#')
 			$path = '#';
 		else
-			$path = base_url().'index.php/display/'.$page;
+			$path = site_url('display/'.$page);
 		
 		return ' - <a href="'.$path.'">'.$name.'</a>';
 	}

@@ -13,11 +13,22 @@
 		if(array_key_exists('user_id', $this->session->all_userdata())){
 			echo '<div class="sidebar_menu">';
 				echo 'Welcome '.$this->session->userdata('user_id').'!'.br();
+				
+				if(array_key_exists('user_admin_id', $this->session->all_userdata())){
+					echo anchor('display/pending_requests', 'Pending Requests', array(
+									'class' => '',
+									'id' => '',
+									'name' => ''
+								));
+					echo br();
+				}
+				
 				echo 'link to Profile'.br();
 				echo 'linkt to Settings'.br();
 				echo anchor('login/logout', 'Logout', array(
 								'class' => '',
-								'id' => ''
+								'id' => '',
+									'name' => ''
 						  ));
 			echo '</div>';//end .side_menu
 			

@@ -23,13 +23,22 @@ class Login_queries extends CI_Model{
 		$this->db->where('password', $data['password']);
 		$q = $this->db->get('user');
 		
-		/* if both username and password are valid, proceed login.
+		/* if both username and password are valid, check if admin then proceed login.
 		 * if only username is valid, ask user if he/she forgot the password.
 		 * if invalid username, regardless of the password, tell user
 		 *		he's/she's not yet a registered member
 		 */
 		if($q->num_rows() == 1){
 			$this->session->set_userdata('user_id', $data['user_id']);
+			
+			$this->db->select('user_id');
+			$this->db->where('user_id', $data['user_id']);
+			$q = $this->db->get('user_admin');
+			
+			if($q->num_rows() == 1){
+				$this->session->set_userdata('user_admin_id', $data['user_id']);
+			}
+			
 		}else{
 			$this->db->select('id');
 			$this->db->where('id', $data['user_id']);
@@ -42,7 +51,9 @@ class Login_queries extends CI_Model{
 				$msg = $data['user_id'].' is not a registered username.';
 				$this->session->set_flashdata('login_message', $msg);
 			}
+			
 		} 
+		
 	}
 }
 
