@@ -4,3 +4,64 @@
 .sidebar_menu{
 	text-align: left;
 }
+
+#label_for_username, #label_for_password{
+	position: absolute;
+	right: 140px;
+	top: 5px;
+	font-family: Tahoma, Geneva, sans-serif;
+	font-size: 12px;
+	color: #4B65A7;
+}
+
+#label_for_password{
+	top: 35px;
+}
+
+#user_id, #password{
+	position: absolute;
+	left: 65px;
+	padding-left: 3px;
+	width: 140px;
+	height: 16px;
+	border: 1px solid #E0E2FC;
+	border-radius: 5px;
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 11px;
+	color: #006;
+}
+
+#password{
+	top: 30px;
+}
+
+#signup_button, #login_button, #login_separator{
+	position: absolute;
+	left: 108px;
+	top: 60px;
+	background-color: transparent;
+	border: 0px solid #FFF;
+	font-family: Tahoma, Geneva, sans-serif;
+	font-size: 12px;
+	color: #4B65A7;
+}
+
+#login_button{
+	position: absolute;
+	left: 160px;
+	top: 60px;
+}
+
+#login_separator{
+	position: absolute;
+	left: 160px;
+	top: 60px;
+	
+	/* pasiguro. para kahit palitan
+	 * yung bg-color, border, etc..., sa buttons
+	 * no epek pa rin sa separator
+	 */
+	background-color: transparent;
+	border: 0px solid #FFF;
+	font-size: 14px;
+}

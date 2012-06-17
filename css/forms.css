@@ -3,13 +3,7 @@
 
 #login_form
 {
-	border-bottom: 1px solid #CCC;
-	padding-bottom: 15px;
 	position: relative;
-	/*
-	top: 409px;
-	margin-left: 656px;
-	width: 282px;
-	height: 70px;
-	*/
+	min-height: 80px;
+	padding-bottom: 15px;
 }

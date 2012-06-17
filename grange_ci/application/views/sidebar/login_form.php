@@ -51,8 +51,7 @@
 				$attr = array(
 						'id' => 'user_id',
 						'name' => 'user_id',
-						'maxlength' => '20',
-						'size' => '20'
+						'maxlength' => '20'
 					);
 				echo form_input($attr);
 				
@@ -65,8 +64,7 @@
 				$attr = array(
 						'id' => 'password',
 						'name' => 'password',
-						'maxlength' => '20',
-						'size' => '20'
+						'maxlength' => '20'
 					);
 				echo form_password($attr);
 				
@@ -76,6 +74,8 @@
 						'content' => 'Sign Up'
 					);
 				echo form_button($attr);
+				
+				echo '<span id="login_separator">|</span>';
 				
 				$attr = array(
 						'id' => 'login_button',

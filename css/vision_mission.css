@@ -1,0 +1,10 @@
+@charset "utf-8";
+/* CSS Document */
+
+#vision, #mission{
+	margin: 20px;
+}
+
+#mission{
+	margin-top: 60px;
+}

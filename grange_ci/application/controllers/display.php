@@ -70,7 +70,7 @@ class Display extends CI_Controller {
 	}
 	
 	/* Open to public but 'read only'
-	 * Only grange members/admin can edit this page.
+	 * Only admin can edit this page.
 	 */
 	function history(){
 		$data['title'] = 'History';
@@ -80,6 +80,19 @@ class Display extends CI_Controller {
 		$data['crumb_links'] .= $this->crumbs->append('history', 'History');
 		
 		$this->_load_page('our_story/history', $data);
+	}
+	
+	/* Open to public but 'read only'
+	 * Only admin can edit this page.
+	 */
+	function vision_mission(){
+		$data['title'] = 'Vision and Mission';
+		
+		$data['crumb_links'] = $this->crumbs->create();
+		$data['crumb_links'] .= $this->crumbs->append('#', 'Our Story');
+		$data['crumb_links'] .= $this->crumbs->append('vision_mission', 'Vision and Mission');
+		
+		$this->_load_page('our_story/vision_mission', $data);
 	}
 	
 	/* Open to public but 'read only'

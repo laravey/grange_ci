@@ -9,34 +9,32 @@
 		);
 	echo form_open('signup/confirm', $attr);
 		$attr = array(
-				'id' => 'label_for_username',
-				'name' => 'label_for_username',
+				'id' => 'label_for_signup_username',
+				'name' => 'label_for_signup_username',
 				'class' => 'signup_label'
 			);
 		echo form_label('<span class="red">*</span> username: ', 'username', $attr);
 		
 		$attr = array(
-				'id' => 'user_id',
-				'name' => 'user_id',
-				'maxlength' => '20',
-				'size' => '20'
+				'id' => 'signup_user_id',
+				'name' => 'signup_user_id',
+				'maxlength' => '20'
 			);
 		echo form_input($attr);
 		
 		echo br();
 		
 		$attr = array(
-				'id' => 'label_for_password',
-				'name' => 'label_for_password',
+				'id' => 'label_for_signup_password',
+				'name' => 'label_for_signup_password',
 				'class' => 'signup_label'
 			);
 		echo form_label('<span class="red">*</span> password: ', 'password', $attr);
 		
 		$attr = array(
-				'id' => 'password',
-				'name' => 'password',
-				'maxlength' => '20',
-				'size' => '20'
+				'id' => 'signup_password',
+				'name' => 'signup_password',
+				'maxlength' => '20'
 			);
 		echo form_password($attr);
 		
@@ -52,8 +50,7 @@
 		$attr = array(
 				'id' => 'confirm_password',
 				'name' => 'confirm_password',
-				'maxlength' => '20',
-				'size' => '20'
+				'maxlength' => '20'
 			);
 		echo form_password($attr);
 		
@@ -69,8 +66,7 @@
 		$attr = array(
 				'id' => 'first_name',
 				'name' => 'first_name',
-				'maxlength' => '50',
-				'size' => '20'
+				'maxlength' => '50'
 			);
 		echo form_input($attr);
 		
@@ -86,8 +82,7 @@
 		$attr = array(
 				'id' => 'middle_name',
 				'name' => 'middle_name',
-				'maxlength' => '20',
-				'size' => '20'
+				'maxlength' => '20'
 			);
 		echo form_input($attr);
 		
@@ -103,8 +98,7 @@
 		$attr = array(
 				'id' => 'last_name',
 				'name' => 'last_name',
-				'maxlength' => '20',
-				'size' => '20'
+				'maxlength' => '20'
 			);
 		echo form_input($attr);
 		
@@ -120,8 +114,7 @@
 		$attr = array(
 				'id' => 'suffix',
 				'name' => 'suffix',
-				'maxlength' => '10',
-				'size' => '20'
+				'maxlength' => '10'
 			);
 		echo form_input($attr);
 		
@@ -142,8 +135,7 @@
 		$attr = array(
 				'id' => 'title',
 				'name' => 'title',
-				'maxlength' => '10',
-				'size' => '20'
+				'maxlength' => '10'
 			);
 		echo form_input($attr);
 		
@@ -164,8 +156,7 @@
 		$attr = array(
 				'id' => 'batch_name',
 				'name' => 'batch_name',
-				'maxlength' => '20',
-				'size' => '20'
+				'maxlength' => '20'
 			);
 		echo form_input($attr);
 		
@@ -181,8 +172,7 @@
 		$attr = array(
 				'id' => 'email',
 				'name' => 'email',
-				'maxlength' => '100',
-				'size' => '20'
+				'maxlength' => '100'
 			);
 		echo form_input($attr);
 		

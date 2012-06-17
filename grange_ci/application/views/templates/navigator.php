@@ -4,6 +4,7 @@
      <li><a href="#" class="top_left_curve bottom_left_curve">Our Story</a>
      	<ul>
        	<li><a href="<?php echo site_url('display/history'); ?>">History</a></li>
+       	<li><a href="<?php echo site_url('display/vision_mission'); ?>">Vision & Mission</a></li>
         <li><a href="<?php echo site_url('display/stories'); ?>"
          			class="bottom_right_curve bottom_left_curve">
               Grange Stories</a>
