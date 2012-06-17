@@ -23,13 +23,24 @@
 					echo br();
 				}
 				
-				echo 'link to Profile'.br();
-				echo 'linkt to Settings'.br();
+				echo anchor('#', 'Profile', array(
+							'class' => '',
+							'id' => '',
+							'name' => ''
+						)).br();
+							
+				echo anchor('#', 'Settings', array(
+							'class' => '',
+							'id' => '',
+							'name' => ''
+						)).br();
+							
 				echo anchor('login/logout', 'Logout', array(
-								'class' => '',
-								'id' => '',
-									'name' => ''
-						  ));
+							'class' => '',
+							'id' => '',
+								'name' => ''
+						 ));
+							
 			echo '</div>';//end .side_menu
 			
 		}else{

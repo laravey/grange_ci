@@ -1,7 +1,7 @@
       </div><!-- end of #inner_body -->
       
       <div id="footer">
-        FOOTER DITO! PAA! PAA! PAA!
+        Grange since 1962.
       </div><!-- end #footer -->
 
   	</div><!-- end of #wrapper -->

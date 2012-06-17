@@ -74,7 +74,7 @@ div
 .main_content
 {
 	width: 680px;
-	min-height: 600px;
+	min-height: 550px;
 	border-right: 1px solid #929DC7;
 	/*border-top: 1px solid #CCC;*/
 	padding-top: 15px;
@@ -113,6 +113,8 @@ div .block_content
 
 #footer
 {
-	font-size: 10px;
+	font-family: Tahoma, Geneva, sans-serif;
+	font-size: 12px;
+	color: #003;
 	margin-top: 15px;
 }

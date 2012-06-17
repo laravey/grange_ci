@@ -1,17 +1,23 @@
 @charset "utf-8";
 /* CSS Document */
 
+#login_form, #login_form a:link, #login_form a:active, #login_form a:visited{
+	font-family: Tahoma, Geneva, sans-serif;
+	font-size: 12px;
+	color: #4B65A7;
+	text-decoration: none;
+}
+
 .sidebar_menu{
-	text-align: left;
+	text-align: right;
+	font-size: 16px;
+	line-height: 1.5em;
 }
 
 #label_for_username, #label_for_password{
 	position: absolute;
 	right: 140px;
 	top: 5px;
-	font-family: Tahoma, Geneva, sans-serif;
-	font-size: 12px;
-	color: #4B65A7;
 }
 
 #label_for_password{
@@ -26,9 +32,6 @@
 	height: 16px;
 	border: 1px solid #E0E2FC;
 	border-radius: 5px;
-	font-family: Verdana, Geneva, sans-serif;
-	font-size: 11px;
-	color: #006;
 }
 
 #password{
@@ -36,14 +39,14 @@
 }
 
 #signup_button, #login_button, #login_separator{
+	font-family: Tahoma, Geneva, sans-serif;
+	font-size: 12px;
+	color: #4B65A7;
 	position: absolute;
 	left: 108px;
 	top: 60px;
 	background-color: transparent;
 	border: 0px solid #FFF;
-	font-family: Tahoma, Geneva, sans-serif;
-	font-size: 12px;
-	color: #4B65A7;
 }
 
 #login_button{

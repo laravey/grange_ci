@@ -11,8 +11,9 @@
 	<script type="text/javascript" src="/javascript/slider.js"></script>
 	<script type="text/javascript" src="/javascript/login.js"></script>
 
-	<link href="/css/banner_slider.css" rel="stylesheet" type="text/css" />
   <link href="/css/grange_template.css" rel="stylesheet" type="text/css" />
+	<link href="/css/nivo_slider_template.css" rel="stylesheet" type="text/css" />
+	<link href="/css/banner.css" rel="stylesheet" type="text/css" />
 	<link href="/css/navigator.css" rel="stylesheet" type="text/css" />
 	<link href="/css/forms.css" rel="stylesheet" type="text/css" />
 	<link href="/css/advertisement.css" rel="stylesheet" type="text/css" />
