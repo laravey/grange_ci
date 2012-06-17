@@ -11,7 +11,7 @@
 	<script type="text/javascript" src="/javascript/NivoSlider.js"></script>
 	<script type="text/javascript" src="/javascript/login.js"></script>
 
-	<link href="/css/nivo-slider.css" rel="stylesheet" type="text/css" />
+	<link href="/css/nivo_slider.css" rel="stylesheet" type="text/css" />
 	<link href="/css/nivo_slider_default_template.css" rel="stylesheet" type="text/css" />
   <link href="/css/grange_template.css" rel="stylesheet" type="text/css" />
 	<link href="/css/navigator.css" rel="stylesheet" type="text/css" />
