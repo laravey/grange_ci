@@ -48,7 +48,7 @@ class Login_queries extends CI_Model{
 				$msg = 'Invalid password. Please try again.';
 				$this->session->set_flashdata('login_message', $msg);
 			}else{
-				$msg = $data['user_id'].' is not a registered username.';
+				$msg = '<strong>'.$data['user_id'].'</strong> is not yet registered.';
 				$this->session->set_flashdata('login_message', $msg);
 			}
 			

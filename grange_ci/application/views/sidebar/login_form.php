@@ -12,7 +12,7 @@
 		
 		if(array_key_exists('user_id', $this->session->all_userdata())){
 			echo '<div class="sidebar_menu">';
-				echo 'Welcome '.$this->session->userdata('user_id').'!'.br();
+				echo 'Welcome '.ucwords($this->session->userdata('user_id')).'!'.br();
 				
 				if(array_key_exists('user_admin_id', $this->session->all_userdata())){
 					echo anchor('display/pending_requests', 'Pending Requests', array(

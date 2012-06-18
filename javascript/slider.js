@@ -8,7 +8,8 @@ $(window).load(function() {
 		var rand = Math.floor(Math.random()*total);
     $('#slider').nivoSlider({
 			borderRadius: 8, //round corner for the slideshow
-			startSlide:rand //random initial image
+			startSlide:rand, //random initial image
+			pauseTime: 20000
 		});
 		
 		//advertisement
@@ -19,6 +20,7 @@ $(window).load(function() {
 			startSlide:rand, //random initial image
 			effect: 'slideInLeft',
 			controlNav: false, //hide navigation bullets
-			captionOpacity: .8
+			captionOpacity: .8,
+			pauseTime: 10000
 		});
 });
