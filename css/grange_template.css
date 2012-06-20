@@ -111,6 +111,11 @@ div .block_content
 	padding: 15px;
 }
 
+.button_link{
+	background-color: transparent;
+	border: 0px solid #FFF;
+}
+
 #footer
 {
 	font-family: Tahoma, Geneva, sans-serif;

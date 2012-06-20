@@ -1,24 +1,27 @@
 <div class='main_content'>
-	<div id='notes'>
-  	<span class='red'>*</span> indicates required fields.
-  </div><!-- end #notes -->
 <?php
 	$attr = array(
 			'id' => 'signup_form',
 			'name' => 'signup_form'
 		);
 	echo form_open('signup/confirm', $attr);
+		echo '
+		<div id="notes">
+			<span class="req">*</span> indicates required fields.
+		</div><!-- end #notes -->';
+		
 		$attr = array(
 				'id' => 'label_for_signup_username',
 				'name' => 'label_for_signup_username',
 				'class' => 'signup_label'
 			);
-		echo form_label('<span class="red">*</span> username: ', 'username', $attr);
+		echo form_label('<span class="req">*</span> username: ', 'username', $attr);
 		
 		$attr = array(
 				'id' => 'signup_user_id',
 				'name' => 'signup_user_id',
-				'maxlength' => '20'
+				'maxlength' => '20',
+				'class' => 'text_field'
 			);
 		echo form_input($attr);
 		
@@ -29,12 +32,13 @@
 				'name' => 'label_for_signup_password',
 				'class' => 'signup_label'
 			);
-		echo form_label('<span class="red">*</span> password: ', 'password', $attr);
+		echo form_label('<span class="req">*</span> password: ', 'password', $attr);
 		
 		$attr = array(
 				'id' => 'signup_password',
 				'name' => 'signup_password',
-				'maxlength' => '20'
+				'maxlength' => '20',
+				'class' => 'text_field'
 			);
 		echo form_password($attr);
 		
@@ -45,12 +49,13 @@
 				'name' => 'label_for_confirm_password',
 				'class' => 'signup_label'
 			);
-		echo form_label('<span class="red">*</span> confirm password: ', 'confirm_password', $attr);
+		echo form_label('<span class="req">*</span> confirm password: ', 'confirm_password', $attr);
 		
 		$attr = array(
 				'id' => 'confirm_password',
 				'name' => 'confirm_password',
-				'maxlength' => '20'
+				'maxlength' => '20',
+				'class' => 'text_field'
 			);
 		echo form_password($attr);
 		
@@ -61,12 +66,13 @@
 				'name' => 'label_for_first_name',
 				'class' => 'signup_label'
 			);
-		echo form_label('<span class="red">*</span> first name: ', 'first_name', $attr);
+		echo form_label('<span class="req">*</span> first name: ', 'first_name', $attr);
 		
 		$attr = array(
 				'id' => 'first_name',
 				'name' => 'first_name',
-				'maxlength' => '50'
+				'maxlength' => '50',
+				'class' => 'text_field'
 			);
 		echo form_input($attr);
 		
@@ -82,7 +88,8 @@
 		$attr = array(
 				'id' => 'middle_name',
 				'name' => 'middle_name',
-				'maxlength' => '20'
+				'maxlength' => '20',
+				'class' => 'text_field'
 			);
 		echo form_input($attr);
 		
@@ -93,12 +100,13 @@
 				'name' => 'label_for_last_name',
 				'class' => 'signup_label'
 			);
-		echo form_label('<span class="red">*</span> last name: ', 'last_name', $attr);
+		echo form_label('<span class="req">*</span> last name: ', 'last_name', $attr);
 		
 		$attr = array(
 				'id' => 'last_name',
 				'name' => 'last_name',
-				'maxlength' => '20'
+				'maxlength' => '20',
+				'class' => 'text_field'
 			);
 		echo form_input($attr);
 		
@@ -114,14 +122,15 @@
 		$attr = array(
 				'id' => 'suffix',
 				'name' => 'suffix',
-				'maxlength' => '10'
+				'maxlength' => '10',
+				'class' => 'text_field'
 			);
 		echo form_input($attr);
 		
 		echo br();
 		
 		echo '<span class="signup_notes" id="suffix_notes" name="suffix_notes">';
-		echo '(e.g. jr, jra, III, etc...)</span>';
+		echo '( e.g. jr, jra, III, etc... )</span>';
 		
 		echo br();
 		
@@ -135,14 +144,15 @@
 		$attr = array(
 				'id' => 'title',
 				'name' => 'title',
-				'maxlength' => '10'
+				'maxlength' => '10',
+				'class' => 'text_field'
 			);
 		echo form_input($attr);
 		
 		echo br();
 		
 		echo '<span class="signup_notes" id="title_notes" name="title_notes">';
-		echo '(e.g. Dr., Atty., Eng., etc...)</span>';
+		echo '( e.g. Mr., Mrs., Dr.,<br /> Atty., Eng., etc... )</span>';
 		
 		echo br();
 		
@@ -151,12 +161,13 @@
 				'name' => 'label_for_batch_name',
 				'class' => 'signup_label'
 			);
-		echo form_label('<span class="red">*</span> batch name: ', 'batch_name', $attr);
+		echo form_label('<span class="req">*</span> batch name: ', 'batch_name', $attr);
 		
 		$attr = array(
 				'id' => 'batch_name',
 				'name' => 'batch_name',
-				'maxlength' => '20'
+				'maxlength' => '20',
+				'class' => 'text_field'
 			);
 		echo form_input($attr);
 		
@@ -167,12 +178,13 @@
 				'name' => 'label_for_email',
 				'class' => 'signup_label'
 			);
-		echo form_label('<span class="red">*</span> email address: ', 'email', $attr);
+		echo form_label('<span class="req">*</span> email address: ', 'email', $attr);
 		
 		$attr = array(
 				'id' => 'email',
 				'name' => 'email',
-				'maxlength' => '100'
+				'maxlength' => '100',
+				'class' => 'text_field'
 			);
 		echo form_input($attr);
 		
@@ -181,6 +193,7 @@
 		$attr = array(
 				'id' => 'register_button',
 				'name' => 'register_button',
+				'class' => 'button_link',
 				'value' => 'Register'
 			);
 		echo form_submit($attr);

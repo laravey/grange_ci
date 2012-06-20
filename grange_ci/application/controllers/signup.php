@@ -10,8 +10,8 @@ class Signup extends CI_Controller{
 	}	
 	
 	function confirm(){
-		$data['user_id'] = $this->input->post('user_id');
-		$data['password'] = $this->input->post('password');
+		$data['user_id'] = $this->input->post('signup_user_id');
+		$data['password'] = $this->input->post('signup_password');
 		$data['first_name'] = $this->input->post('first_name');
 		$data['middle_name'] = $this->input->post('middle_name');
 		$data['last_name'] = $this->input->post('last_name');

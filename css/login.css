@@ -28,11 +28,6 @@
 	position: absolute;
 	left: 65px;
 	top: -13px;
-	padding-left: 3px;
-	width: 140px;
-	height: 16px;
-	border: 1px solid #E0E2FC;
-	border-radius: 5px;
 }
 
 #password{
@@ -75,4 +70,9 @@
 	padding: 5px;
 	width: 195px;/*
 	border: 1px solid #000;*/
+}
+
+#login_form div.blank_box{
+	height: 40px;
+	width: 100%;
 }

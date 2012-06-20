@@ -21,6 +21,7 @@
 	<link href="/css/crumbs.css" rel="stylesheet" type="text/css" />
 	<link href="/css/vision_mission.css" rel="stylesheet" type="text/css" />
 	<link href="/css/home.css" rel="stylesheet" type="text/css" />
+	<link href="/css/signup.css" rel="stylesheet" type="text/css" />
 
 </head>
 

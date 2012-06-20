@@ -58,7 +58,8 @@
 				$attr = array(
 						'id' => 'user_id',
 						'name' => 'user_id',
-						'maxlength' => '20'
+						'maxlength' => '20',
+						'class' => 'text_field'
 					);
 				echo form_input($attr);
 				
@@ -71,13 +72,15 @@
 				$attr = array(
 						'id' => 'password',
 						'name' => 'password',
-						'maxlength' => '20'
+						'maxlength' => '20',
+						'class' => 'text_field'
 					);
 				echo form_password($attr);
 				
 				$attr = array(
 						'id' => 'signup_button',
 						'name' => 'signup_button',
+						'class' => 'button_link',
 						'content' => 'Sign Up'
 					);
 				echo form_button($attr);
@@ -87,6 +90,7 @@
 				$attr = array(
 						'id' => 'login_button',
 						'name' => 'login_button',
+						'class' => 'button_link',
 						'value' => 'Login'
 					);
 				echo form_submit($attr);
@@ -95,6 +99,7 @@
 			echo '<div id="login_flash_message">';
 				echo $this->session->flashdata('login_message');
 			echo '</div>';//end #login_flash_message
+			echo '<div class="blank_box"></div>';
 		}
 	?>
   </div><!-- end #login_form -->
