@@ -15,20 +15,19 @@
 }
 
 #label_for_username, #label_for_password{
-	position: relative;
-	right: 70px;
-	top: 0px;
+	position: absolute;
+	right: 140px;
+	top: -10px;
 }
 
 #label_for_password{
-	right: 141px;
-	top: 7px;
+	top: 13px;
 }
 
 #user_id, #password{
-	position: relative;
+	position: absolute;
 	left: 65px;
-	top: -16px;
+	top: -13px;
 	padding-left: 3px;
 	width: 140px;
 	height: 16px;
@@ -37,29 +36,26 @@
 }
 
 #password{
-	left: 37px;
-	top: -13px;
+	top: 10px;
 }
 
 #signup_button, #login_button, #login_separator{
 	font-family: Tahoma, Geneva, sans-serif;
 	font-size: 12px;
 	color: #4B65A7;
-	position: relative;
-	left: 59px;
-	top: -10px;
+	position: absolute;
+	left: 105px;
+	top: 37px;
 	background-color: transparent;
 	border: 0px solid #FFF;
 }
 
 #login_button{
-	position: relative;
-	left: 50px;
+	left: 160px;
 }
 
 #login_separator{
-	position: relative;
-	left: 55px;
+	left: 160px;
 	
 	/* pasiguro. para kahit palitan
 	 * yung bg-color, border, etc..., sa buttons
@@ -75,8 +71,8 @@
 	word-wrap: break-word;
 	color: #900;
 	position: relative;
-	top: -10px;
+	top: 60px;
 	padding: 5px;
-	width: 195px;
-	/*border: 1px solid #000;*/
+	width: 195px;/*
+	border: 1px solid #000;*/
 }

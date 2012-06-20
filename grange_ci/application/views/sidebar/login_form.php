@@ -44,10 +44,6 @@
 			echo '</div>';//end .side_menu
 			
 		}else{
-			echo '<div id="login_flash_message">';
-				echo $this->session->flashdata('login_message');
-			echo '</div>';//end #login_flash_message
-			
 			$attr = array(
 					'id' => 'grange_login',
 					'name' => 'grange_login'
@@ -95,6 +91,10 @@
 					);
 				echo form_submit($attr);
 			echo form_close();
+			
+			echo '<div id="login_flash_message">';
+				echo $this->session->flashdata('login_message');
+			echo '</div>';//end #login_flash_message
 		}
 	?>
   </div><!-- end #login_form -->
