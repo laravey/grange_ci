@@ -16,7 +16,7 @@ $(window).load(function() {
 		var total = $('#ad_slider img').length;
 		var rand = Math.floor(Math.random()*total);
     $('#ad_slider').nivoSlider({
-			borderRadius: 5, //round corner for the slideshow
+			borderRadius: 0, //round corner for the slideshow
 			startSlide:rand, //random initial image
 			effect: 'slideInLeft',
 			controlNav: false, //hide navigation bullets

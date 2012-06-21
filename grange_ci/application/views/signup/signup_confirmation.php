@@ -1,10 +1,14 @@
 <div class='main_content'>
 <?php
-	echo 'Nice One!'.br().br();
-	echo $user_title.' '.$first_name.' '.$middle_name.' '.$last_name.' '.$suffix.br();
-	echo 'username: '.$user_id.br();
-	echo 'password: '.$password.br();
-	echo 'batch: '.$batch_name.br();
-	echo 'email: '.$email.br();
+	echo '<div id="confirm_msg">'.$msg.'</div>';
+	
+	echo '<div id="confirm_details">';
+		echo '<span class="confirm_label">username: </span>
+					<span class="confirm_data">'.$user_id.'</span>'.br();
+		echo '<span class="confirm_label">batch: </span>
+					<span class="confirm_data">'.$batch_name.'</span>'.br();
+		echo '<span class="confirm_label">email: </span>
+					<span class="confirm_data">'.$email.'</span>'.br();
+	echo '</div>'; //end #confirm_details
 ?>
 </div>

@@ -1,0 +1,60 @@
+@charset "utf-8";
+/* CSS Document */
+
+#signup_form input, #signup_form span, .signup_label{
+	position: relative;
+	top: 20px;
+	margin-top: 5px;
+}
+
+#notes{
+	position: relative;
+	right: 50px;
+	color: #930; 
+}
+
+.signup_notes{
+	font-size: 10px;
+	color: #969;
+	right: 210px;
+}
+
+span#title_notes{
+	position: relative;
+	top: 0px;
+}
+
+#notes .req, #signup_form .req{
+	margin-top: 0px;
+	top: 0px;
+	color: #F00;
+}
+
+#signup_form input.text_field{
+	width: 200px;
+	background-color: #FEF9DA;
+	border-color: #060;
+}
+
+#confirm_password{
+	margin-bottom: 20px;
+}
+
+#last_name{
+	margin-bottom: 20px;
+}
+
+#title{
+	margin-bottom: 20px;
+}
+
+#email{
+	margin-bottom: 20px;
+}
+
+#register_button{
+	right: 100px;
+	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	font-size: 12px;
+	color: #323472;
+}

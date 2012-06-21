@@ -20,6 +20,17 @@ class Signup extends CI_Controller{
 		$data['batch_name'] = $this->input->post('batch_name');
 		$data['email'] = $this->input->post('email');
 		
+		$data['user_title'] .= ($data['user_title'] != NULL)? ' ': '';
+		$data['suffix'] = ($data['suffix'] != NULL)? ' '.$data['suffix']: '';
+	
+		$data['full_name'] = $data['user_title'].$data['first_name'].' '
+													.$data['middle_name'].' '.$data['last_name'].$data['suffix'];
+													
+		$data['msg'] = 'Thank you for signing up <strong>'.$data['full_name']
+										.'</strong>. Your details are shown below. Just wait for the administrator
+										to accept your request. A message will be sent
+										to your email address regarding the result of your application.'.br();
+		
 		$this->display->signup('signup_confirmation', $data);
 		
 		//$data_array = http_build_query(array('data' => $data));

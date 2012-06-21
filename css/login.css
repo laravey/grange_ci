@@ -21,7 +21,7 @@
 }
 
 #label_for_password{
-	top: 13px;
+	top: 18px;
 }
 
 #user_id, #password{
@@ -31,7 +31,7 @@
 }
 
 #password{
-	top: 10px;
+	top: 15px;
 }
 
 #signup_button, #login_button, #login_separator{
